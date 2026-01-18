@@ -1,39 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Leelakrishna | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffd633;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #2c5364;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 5px;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background: #2c5364;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #2c5364;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: #2c5364;
+      font-weight: 600;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 1.05rem;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #2c5364;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #000;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #0f2027;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- ANIMATION ---------- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Leelakrishna Kondapaturi</h1>
-  <p>Final-year B.Tech CSE (AI & ML) | Python & Django Developer</p>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1>Leelakrishna Kondapaturi</h1>
+    <p>Final-year B.Tech CSE (AI & ML) | Python & Django Developer</p>
+    <a href="#" class="btn">Download Resume</a>
+  </header>
 
-<section>
-  <h2>Skills</h2>
-  <p>Python, Django, SQL, HTML, CSS, JavaScript, Machine Learning</p>
-</section>
+  <!-- SKILLS -->
+  <section class="fade-in">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">Django</div>
+      <div class="skill">SQL</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
 
-<section>
-  <h2>Projects</h2>
-  <ul>
-    <li><b>Company Research Agent</b> – Django app with RSS news aggregation</li>
-    <li><b>AI Resume Screening System</b> – TF-IDF + Cosine Similarity</li>
-    <li><b>ElectroShop</b> – E-commerce web app with cart & auth</li>
-  </ul>
-</section>
+  <!-- PROJECTS -->
+  <section class="fade-in">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Company Research Agent</h3>
+        <p>Django application that aggregates company profiles and latest news using RSS feeds.</p>
+        <a href="https://github.com/leela-2005" target="_blank">View on GitHub →</a>
+      </div>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: leelakrishnakondapaturi@gmail.com</p>
-  <p>
-    <a href="https://github.com/leela-2005">GitHub</a> |
-    <a href="https://linkedin.com/in/leelakrishna-kondapaturi">LinkedIn</a>
-  </p>
-</section>
+      <div class="project-card">
+        <h3>AI Resume Screening System</h3>
+        <p>Resume–job matching system using TF-IDF and cosine similarity.</p>
+        <a href="https://github.com/leela-2005" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>ElectroShop</h3>
+        <p>E-commerce web application with authentication, cart, and admin panel.</p>
+        <a href="https://github.com/leela-2005" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="fade-in contact">
+    <h2>Contact</h2>
+    <p>Email: leelakrishnakondapaturi@gmail.com</p>
+    <div class="social-links">
+      <a href="https://github.com/leela-2005" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/leelakrishna-kondapaturi" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Leelakrishna Kondapaturi | Built with ❤️
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 
 </body>
 </html>
+
