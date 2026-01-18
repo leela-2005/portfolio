@@ -1,244 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leelakrishna | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leelakrishna Kondapaturi | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<style>
+:root{
+  --primary:#6a11cb;
+  --secondary:#2575fc;
+  --dark:#0f172a;
+  --light:#f8fafc;
+}
 
-    body {
-      background: #f4f7fb;
-      color: #222;
-    }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
-    /* ---------- HEADER ---------- */
-    header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      padding: 90px 20px;
-      text-align: center;
-    }
+body{
+  background:linear-gradient(120deg,#0f172a,#020617);
+  color:#e5e7eb;
+  line-height:1.7;
+}
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
+/* ---------- HEADER ---------- */
+header{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at top,#6a11cb55,transparent 60%),
+    radial-gradient(circle at bottom,#2575fc55,transparent 60%);
+}
 
-    header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
+header h1{
+  font-size:3.2rem;
+  font-weight:700;
+  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 30px;
-      background: #ffcc00;
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 30px;
-      transition: 0.3s;
-    }
+header p{
+  margin-top:15px;
+  font-size:1.2rem;
+  color:#cbd5f5;
+}
 
-    .btn:hover {
-      background: #ffd633;
-      transform: translateY(-3px);
-    }
+.btn{
+  margin-top:30px;
+  padding:14px 34px;
+  border-radius:40px;
+  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 10px 30px #6a11cb55;
+  transition:.4s;
+}
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
-    }
+.btn:hover{
+  transform:translateY(-6px) scale(1.05);
+  box-shadow:0 20px 50px #2575fc88;
+}
 
-    section h2 {
-      text-align: center;
-      font-size: 2.3rem;
-      margin-bottom: 40px;
-    }
+/* ---------- SECTIONS ---------- */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 20px;
+}
 
-    /* ---------- SKILLS ---------- */
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
+section h2{
+  text-align:center;
+  font-size:2.6rem;
+  margin-bottom:60px;
+  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-    .skill {
-      background: white;
-      padding: 12px 20px;
-      border-radius: 25px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+/* ---------- GLASS CARD ---------- */
+.glass{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(16px);
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
 
-    .skill:hover {
-      background: #2c5364;
-      color: white;
-    }
+/* ---------- SKILLS ---------- */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:18px;
+}
 
-    /* ---------- PROJECTS ---------- */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
+.skill{
+  padding:14px 26px;
+  border-radius:30px;
+  background:rgba(255,255,255,.12);
+  transition:.4s;
+  cursor:default;
+}
 
-    .project-card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+.skill:hover{
+  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  transform:translateY(-5px) scale(1.08);
+}
 
-    .project-card:hover {
-      transform: translateY(-8px);
-    }
+/* ---------- PROJECTS ---------- */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+}
 
-    /* ---------- CONTACT ---------- */
-    .contact-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
+.card{
+  padding:32px;
+  transition:.4s;
+  position:relative;
+  overflow:hidden;
+}
 
-    .contact-info p {
-      margin: 15px 0;
-      font-size: 1.05rem;
-    }
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,#6a11cb55,#2575fc55);
+  opacity:0;
+  transition:.4s;
+}
 
-    form {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
+.card:hover::before{opacity:1}
+.card:hover{transform:translateY(-12px)}
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 12px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
+.card h3{
+  position:relative;
+  font-size:1.4rem;
+  margin-bottom:10px;
+}
 
-    form button {
-      background: #2c5364;
-      color: white;
-      border: none;
-      padding: 12px;
-      width: 100%;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.card p, .card ul{
+  position:relative;
+  font-size:.95rem;
+  color:#e5e7eb;
+}
 
-    form button:hover {
-      background: #203a43;
-    }
+.card ul{padding-left:18px;margin-top:10px}
 
-    footer {
-      background: #0f2027;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
+.card a{
+  position:relative;
+  display:inline-block;
+  margin-top:15px;
+  color:#93c5fd;
+  font-weight:600;
+  text-decoration:none;
+}
 
-    @media(max-width: 768px) {
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+/* ---------- TIMELINE (INTERNSHIPS) ---------- */
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  width:3px;
+  height:100%;
+  background:linear-gradient(#6a11cb,#2575fc);
+}
+
+.timeline-item{
+  width:50%;
+  padding:30px;
+  position:relative;
+}
+
+.timeline-item.left{left:0;text-align:right}
+.timeline-item.right{left:50%}
+
+.timeline-item::after{
+  content:"";
+  position:absolute;
+  top:35px;
+  width:16px;
+  height:16px;
+  background:#2575fc;
+  border-radius:50%;
+}
+
+.timeline-item.left::after{right:-8px}
+.timeline-item.right::after{left:-8px}
+
+/* ---------- CONTACT ---------- */
+.contact{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.contact input,textarea{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  margin-bottom:15px;
+}
+
+.contact button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#020617;
+  color:#94a3b8;
+}
+
+@media(max-width:900px){
+  .timeline::before{left:10px}
+  .timeline-item{width:100%;left:0;text-align:left}
+  .timeline-item::after{left:2px}
+  .contact{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Leelakrishna Kondapaturi</h1>
-  <p>Final-year B.Tech CSE (AI & ML) | Python & Django Developer</p>
+<h1>Leelakrishna Kondapaturi</h1>
+<p>Final-year B.Tech CSE (AI & ML) | Python & Django Developer</p>
 <a href="Leelakrishna%20(2).pdf" download class="btn">
   Download Resume
 </a>
-
 </header>
 
 <section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="skill">Python</div>
-    <div class="skill">Django</div>
-    <div class="skill">SQL</div>
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Machine Learning</div>
-    <div class="skill">Git & GitHub</div>
-  </div>
+<h2>Skills</h2>
+<div class="skills">
+<div class="skill">Python</div>
+<div class="skill">Django</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">REST APIs</div>
+<div class="skill">SQL</div>
+<div class="skill">HTML & CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Cyber Security</div>
+<div class="skill">Git & GitHub</div>
+</div>
 </section>
 
 <section>
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project-card">
-      <h3>Company Research Agent</h3>
-      <p>Django app with RSS-based company news aggregation.</p>
-    </div>
+<h2>Projects</h2>
+<div class="grid">
 
-    <div class="project-card">
-      <h3>AI Resume Screening System</h3>
-      <p>Resume ranking using TF-IDF & Cosine Similarity.</p>
-    </div>
+<div class="card glass">
+<h3>USB Physical Security Tool</h3>
+<p>Password/email authenticated system to block/unblock USB ports for endpoint protection.</p>
+<ul>
+<li>Prevents data theft & malware injection</li>
+<li>Admin-controlled access</li>
+<li>OS-level security handling</li>
+</ul>
+<a href="https://github.com/leela-2005/usbphysicalsecurity">GitHub →</a>
+</div>
 
-    <div class="project-card">
-      <h3>ElectroShop</h3>
-      <p>E-commerce platform with cart, auth & admin panel.</p>
-    </div>
-  </div>
+<div class="card glass">
+<h3>Company Research Agent</h3>
+<p>Django-based agent aggregating company profiles and live news via RSS.</p>
+<ul>
+<li>Automated research</li>
+<li>Error-handled modular backend</li>
+</ul>
+<a href="https://github.com/leela-2005/Company-Researcher-Agent">GitHub →</a>
+</div>
+
+<div class="card glass">
+<h3>AI Resume Screening System</h3>
+<p>ML system that ranks resumes using NLP similarity techniques.</p>
+<ul>
+<li>TF-IDF & Cosine Similarity</li>
+<li>Automated resume ranking</li>
+</ul>
+<a href="https://github.com/leela-2005/resume_screening_streamlite">GitHub →</a>
+</div>
+
+</div>
 </section>
 
 <section>
-  <h2>Connect With Me</h2>
-  <div class="contact-box">
+<h2>Internships</h2>
+<div class="timeline">
 
-    <div class="contact-info">
-      <p><b>Name:</b> Leelakrishna Kondapaturi</p>
-      <p><b>Email:</b> leelakrishnakondapaturi@gmail.com</p>
-      <p><b>Mobile:</b> +91 9652346474</p>
-      <p>
-        <a href="https://github.com/leela-2005" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/leelakrishna-kondapaturi" target="_blank">LinkedIn</a>
-      </p>
-    </div>
+<div class="timeline-item left glass">
+<h3>Web Development Intern – APSSDC</h3>
+<ul>
+<li>Django web apps</li>
+<li>Authentication & CRUD</li>
+<li>Backend optimization</li>
+</ul>
+</div>
 
-    <!-- CONTACT FORM -->
-    <!-- Replace action URL after Formspree setup -->
-    <form action="https://formspree.io/f/mnjjpdpd" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+<div class="timeline-item right glass">
+<h3>Cybersecurity Intern – Supraja Technologies</h3>
+<ul>
+<li>Endpoint & web security</li>
+<li>Secure coding practices</li>
+<li>Threat analysis</li>
+</ul>
+</div>
 
-  </div>
+</div>
+</section>
+
+<section>
+<h2>Connect With Me</h2>
+<div class="contact">
+
+<div>
+<p><b>Name:</b> Leelakrishna Kondapaturi</p>
+<p><b>Email:</b> leelakrishnakondapaturi@gmail.com</p>
+<p><b>Mobile:</b> +91 9652346474</p>
+<p>
+<a href="https://github.com/leela-2005">GitHub</a> |
+<a href="https://www.linkedin.com/in/leelakrishna-kondapaturi-922a32293?">LinkedIn</a>
+</p>
+</div>
+
+<form action="https://formspree.io/f/your_form_id" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</div>
 </section>
 
 <footer>
-  © 2026 Leelakrishna Kondapaturi | Portfolio
+© 2026 Leelakrishna Kondapaturi | Designed with ❤️
 </footer>
 
 </body>
