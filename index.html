@@ -6,24 +6,31 @@
 <title>Leelakrishna Kondapaturi | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
 :root{
-  --primary:#6a11cb;
-  --secondary:#2575fc;
-  --dark:#0f172a;
-  --light:#f8fafc;
+  --primary:#2563eb;     /* Blue */
+  --secondary:#06b6d4;   /* Cyan */
+  --accent:#22c55e;     /* Green */
+  --bg:#f8fafc;         /* Light background */
+  --card:#ffffff;       /* Card white */
+  --text:#0f172a;       /* Dark text */
+  --muted:#475569;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
 body{
-  background:linear-gradient(120deg,#0f172a,#020617);
-  color:#e5e7eb;
+  background:linear-gradient(120deg,#f8fafc,#eef2ff);
+  color:var(--text);
   line-height:1.7;
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 header{
   min-height:100vh;
   display:flex;
@@ -32,42 +39,42 @@ header{
   align-items:center;
   text-align:center;
   background:
-    radial-gradient(circle at top,#6a11cb55,transparent 60%),
-    radial-gradient(circle at bottom,#2575fc55,transparent 60%);
+    radial-gradient(circle at top right,#93c5fd,transparent 60%),
+    radial-gradient(circle at bottom left,#67e8f9,transparent 60%);
 }
 
 header h1{
-  font-size:3.2rem;
+  font-size:3.1rem;
   font-weight:700;
-  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
   -webkit-background-clip:text;
   color:transparent;
 }
 
 header p{
   margin-top:15px;
-  font-size:1.2rem;
-  color:#cbd5f5;
+  font-size:1.15rem;
+  color:var(--muted);
 }
 
 .btn{
   margin-top:30px;
-  padding:14px 34px;
+  padding:14px 36px;
   border-radius:40px;
-  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
   color:#fff;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 10px 30px #6a11cb55;
-  transition:.4s;
+  box-shadow:0 12px 30px rgba(37,99,235,.35);
+  transition:.35s;
 }
 
 .btn:hover{
-  transform:translateY(-6px) scale(1.05);
-  box-shadow:0 20px 50px #2575fc88;
+  transform:translateY(-5px);
+  box-shadow:0 20px 45px rgba(6,182,212,.45);
 }
 
-/* ---------- SECTIONS ---------- */
+/* SECTIONS */
 section{
   max-width:1200px;
   margin:auto;
@@ -76,23 +83,23 @@ section{
 
 section h2{
   text-align:center;
-  font-size:2.6rem;
+  font-size:2.5rem;
   margin-bottom:60px;
-  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
   -webkit-background-clip:text;
   color:transparent;
 }
 
-/* ---------- GLASS CARD ---------- */
+/* GLASS CARD (LIGHT) */
 .glass{
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(16px);
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(10px);
   border-radius:22px;
-  border:1px solid rgba(255,255,255,0.15);
-  box-shadow:0 15px 40px rgba(0,0,0,.4);
+  border:1px solid #e2e8f0;
+  box-shadow:0 15px 35px rgba(15,23,42,.08);
 }
 
-/* ---------- SKILLS ---------- */
+/* SKILLS */
 .skills{
   display:flex;
   flex-wrap:wrap;
@@ -103,17 +110,19 @@ section h2{
 .skill{
   padding:14px 26px;
   border-radius:30px;
-  background:rgba(255,255,255,.12);
-  transition:.4s;
-  cursor:default;
+  background:#ffffff;
+  border:1px solid #e2e8f0;
+  color:var(--text);
+  transition:.35s;
 }
 
 .skill:hover{
-  background:linear-gradient(90deg,#6a11cb,#2575fc);
-  transform:translateY(-5px) scale(1.08);
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:#fff;
+  transform:translateY(-4px) scale(1.05);
 }
 
-/* ---------- PROJECTS ---------- */
+/* PROJECTS GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -122,46 +131,15 @@ section h2{
 
 .card{
   padding:32px;
-  transition:.4s;
+  transition:.35s;
   position:relative;
-  overflow:hidden;
 }
 
-.card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(120deg,#6a11cb55,#2575fc55);
-  opacity:0;
-  transition:.4s;
+.card:hover{
+  transform:translateY(-10px);
 }
 
-.card:hover::before{opacity:1}
-.card:hover{transform:translateY(-12px)}
-
-.card h3{
-  position:relative;
-  font-size:1.4rem;
-  margin-bottom:10px;
-}
-
-.card p, .card ul{
-  position:relative;
-  font-size:.95rem;
-  color:#e5e7eb;
-}
-
-.card ul{padding-left:18px;margin-top:10px}
-
-.card a{
-  position:relative;
-  display:inline-block;
-  margin-top:15px;
-  color:#93c5fd;
-  font-weight:600;
-  text-decoration:none;
-}
-/* ---------- INTERNSHIP TIMELINE ---------- */
+/* INTERNSHIP TIMELINE */
 .timeline{
   position:relative;
   max-width:900px;
@@ -175,7 +153,7 @@ section h2{
   top:0;
   width:4px;
   height:100%;
-  background:linear-gradient(180deg,#6a11cb,#2575fc);
+  background:linear-gradient(180deg,var(--primary),var(--secondary));
   border-radius:10px;
 }
 
@@ -193,9 +171,9 @@ section h2{
 
 .timeline-date{
   font-size:.85rem;
-  color:#cbd5f5;
-  display:block;
+  color:var(--muted);
   margin-bottom:12px;
+  display:block;
 }
 
 .timeline-item ul{
@@ -207,7 +185,6 @@ section h2{
   font-size:.95rem;
 }
 
-/* Left & Right alignment */
 .timeline-item.left{
   left:0;
   text-align:right;
@@ -217,55 +194,32 @@ section h2{
   left:50%;
 }
 
-/* Timeline dots */
 .timeline-item::after{
   content:"";
   position:absolute;
-  top:40px;
-  width:18px;
-  height:18px;
-  background:#2575fc;
+  top:38px;
+  width:16px;
+  height:16px;
+  background:var(--secondary);
   border-radius:50%;
-  box-shadow:0 0 15px #2575fc;
+  box-shadow:0 0 10px rgba(6,182,212,.6);
 }
 
-.timeline-item.left::after{
-  right:-9px;
-}
+.timeline-item.left::after{right:-8px}
+.timeline-item.right::after{left:-8px}
 
-.timeline-item.right::after{
-  left:-9px;
-}
-
-/* Responsive */
-@media(max-width:900px){
-  .timeline::before{
-    left:12px;
-  }
-  .timeline-item{
-    width:100%;
-    left:0;
-    text-align:left;
-    padding-left:40px;
-  }
-  .timeline-item::after{
-    left:3px;
-  }
-}
-
-
-/* ---------- CONTACT ---------- */
+/* CONTACT */
 .contact{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:50px;
 }
 
-.contact input,textarea{
+.contact input,.contact textarea{
   width:100%;
   padding:14px;
   border-radius:10px;
-  border:none;
+  border:1px solid #cbd5f5;
   margin-bottom:15px;
 }
 
@@ -274,24 +228,31 @@ section h2{
   padding:14px;
   border:none;
   border-radius:12px;
-  background:linear-gradient(90deg,#6a11cb,#2575fc);
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
   color:#fff;
   font-size:1rem;
   cursor:pointer;
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 footer{
+  background:#f1f5f9;
+  color:#475569;
   text-align:center;
   padding:25px;
-  background:#020617;
-  color:#94a3b8;
+  font-size:.9rem;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
-  .timeline::before{left:10px}
-  .timeline-item{width:100%;left:0;text-align:left}
-  .timeline-item::after{left:2px}
+  .timeline::before{left:12px}
+  .timeline-item{
+    width:100%;
+    left:0;
+    text-align:left;
+    padding-left:40px;
+  }
+  .timeline-item::after{left:3px}
   .contact{grid-template-columns:1fr}
 }
 </style>
