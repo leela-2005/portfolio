@@ -161,8 +161,7 @@ section h2{
   font-weight:600;
   text-decoration:none;
 }
-
-/* ---------- TIMELINE (INTERNSHIPS) ---------- */
+/* ---------- INTERNSHIP TIMELINE ---------- */
 .timeline{
   position:relative;
   max-width:900px;
@@ -173,32 +172,87 @@ section h2{
   content:"";
   position:absolute;
   left:50%;
-  width:3px;
+  top:0;
+  width:4px;
   height:100%;
-  background:linear-gradient(#6a11cb,#2575fc);
+  background:linear-gradient(180deg,#6a11cb,#2575fc);
+  border-radius:10px;
 }
 
 .timeline-item{
   width:50%;
   padding:30px;
   position:relative;
+  margin-bottom:60px;
 }
 
-.timeline-item.left{left:0;text-align:right}
-.timeline-item.right{left:50%}
+.timeline-item h3{
+  margin-bottom:8px;
+  font-size:1.3rem;
+}
 
+.timeline-date{
+  font-size:.85rem;
+  color:#cbd5f5;
+  display:block;
+  margin-bottom:12px;
+}
+
+.timeline-item ul{
+  padding-left:18px;
+}
+
+.timeline-item ul li{
+  margin:8px 0;
+  font-size:.95rem;
+}
+
+/* Left & Right alignment */
+.timeline-item.left{
+  left:0;
+  text-align:right;
+}
+
+.timeline-item.right{
+  left:50%;
+}
+
+/* Timeline dots */
 .timeline-item::after{
   content:"";
   position:absolute;
-  top:35px;
-  width:16px;
-  height:16px;
+  top:40px;
+  width:18px;
+  height:18px;
   background:#2575fc;
   border-radius:50%;
+  box-shadow:0 0 15px #2575fc;
 }
 
-.timeline-item.left::after{right:-8px}
-.timeline-item.right::after{left:-8px}
+.timeline-item.left::after{
+  right:-9px;
+}
+
+.timeline-item.right::after{
+  left:-9px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .timeline::before{
+    left:12px;
+  }
+  .timeline-item{
+    width:100%;
+    left:0;
+    text-align:left;
+    padding-left:40px;
+  }
+  .timeline-item::after{
+    left:3px;
+  }
+}
+
 
 /* ---------- CONTACT ---------- */
 .contact{
@@ -302,34 +356,59 @@ footer{
 </ul>
 <a href="https://github.com/leela-2005/resume_screening_streamlite">GitHub →</a>
 </div>
+  <div class="card glass">
+  <h3>ElectroShop – E-Commerce Web Application</h3>
+  <p>
+    A full-stack e-commerce platform designed for online electronics shopping,
+    built with a secure and scalable backend.
+  </p>
+  <ul>
+    <li>User authentication (login, register, logout)</li>
+    <li>Product listing with categories (Mobiles, TVs, ACs, etc.)</li>
+    <li>Shopping cart & order management</li>
+    <li>Admin panel for product & user management</li>
+    <li>Secure CRUD operations</li>
+    <li><b>Tech Stack:</b> Python, Django, SQLite, HTML, CSS</li>
+  </ul>
+  <a href="https://github.com/leela-2005/electroshop" target="_blank">
+    GitHub →
+  </a>
+</div>
+
 
 </div>
 </section>
 
 <section>
-<h2>Internships</h2>
-<div class="timeline">
+  <h2>Internship Experience</h2>
 
-<div class="timeline-item left glass">
-<h3>Web Development Intern – APSSDC</h3>
-<ul>
-<li>Django web apps</li>
-<li>Authentication & CRUD</li>
-<li>Backend optimization</li>
-</ul>
-</div>
+  <div class="timeline">
 
-<div class="timeline-item right glass">
-<h3>Cybersecurity Intern – Supraja Technologies</h3>
-<ul>
-<li>Endpoint & web security</li>
-<li>Secure coding practices</li>
-<li>Threat analysis</li>
-</ul>
-</div>
+    <div class="timeline-item left glass">
+      <h3>Web Development Intern – APSSDC</h3>
+      <span class="timeline-date">May 2025 – July 2025</span>
+      <ul>
+        <li>Developed Django-based web applications</li>
+        <li>Implemented user authentication & CRUD operations</li>
+        <li>Worked with relational databases</li>
+        <li>Improved backend performance and security</li>
+      </ul>
+    </div>
 
-</div>
+    <div class="timeline-item right glass">
+      <h3>Cybersecurity Intern – Supraja Technologies</h3>
+      <span class="timeline-date">May 2024 – Aug 2024</span>
+      <ul>
+        <li>Worked on endpoint and web application security</li>
+        <li>Learned secure coding practices</li>
+        <li>Analyzed common cyber threats</li>
+        <li>Applied security concepts in real-world scenarios</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
+
 
 <section>
 <h2>Connect With Me</h2>
