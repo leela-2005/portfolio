@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Leelakrishna | Portfolio</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -19,14 +18,13 @@
     body {
       background: #f4f7fb;
       color: #222;
-      line-height: 1.6;
     }
 
     /* ---------- HEADER ---------- */
     header {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
-      padding: 80px 20px;
+      padding: 90px 20px;
       text-align: center;
     }
 
@@ -58,7 +56,6 @@
       transform: translateY(-3px);
     }
 
-    /* ---------- SECTIONS ---------- */
     section {
       max-width: 1100px;
       margin: auto;
@@ -69,17 +66,6 @@
       text-align: center;
       font-size: 2.3rem;
       margin-bottom: 40px;
-      position: relative;
-    }
-
-    section h2::after {
-      content: "";
-      width: 80px;
-      height: 4px;
-      background: #2c5364;
-      display: block;
-      margin: 12px auto 0;
-      border-radius: 5px;
     }
 
     /* ---------- SKILLS ---------- */
@@ -95,14 +81,12 @@
       padding: 12px 20px;
       border-radius: 25px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      font-weight: 500;
       transition: 0.3s;
     }
 
     .skill:hover {
       background: #2c5364;
       color: white;
-      transform: scale(1.05);
     }
 
     /* ---------- PROJECTS ---------- */
@@ -121,48 +105,51 @@
     }
 
     .project-card:hover {
-      transform: translateY(-10px);
-    }
-
-    .project-card h3 {
-      margin-bottom: 10px;
-      color: #2c5364;
-    }
-
-    .project-card p {
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-    }
-
-    .project-card a {
-      text-decoration: none;
-      color: #2c5364;
-      font-weight: 600;
+      transform: translateY(-8px);
     }
 
     /* ---------- CONTACT ---------- */
-    .contact {
-      text-align: center;
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
     }
 
-    .contact p {
-      margin: 10px 0;
+    .contact-info p {
+      margin: 15px 0;
       font-size: 1.05rem;
     }
 
-    .social-links a {
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 600;
-      color: #2c5364;
-      transition: 0.3s;
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
-    .social-links a:hover {
-      color: #000;
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
 
-    /* ---------- FOOTER ---------- */
+    form button {
+      background: #2c5364;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #203a43;
+    }
+
     footer {
       background: #0f2027;
       color: white;
@@ -171,104 +158,85 @@
       font-size: 0.9rem;
     }
 
-    /* ---------- ANIMATION ---------- */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease;
-    }
-
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
+    @media(max-width: 768px) {
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Leelakrishna Kondapaturi</h1>
-    <p>Final-year B.Tech CSE (AI & ML) | Python & Django Developer</p>
-    <a href="#" class="btn">Download Resume</a>
-  </header>
+<header>
+  <h1>Leelakrishna Kondapaturi</h1>
+  <p>Final-year B.Tech CSE (AI & ML) | Python & Django Developer</p>
+  <a href="Leelakrishna_Resume.pdf" class="btn" download>Download Resume</a>
+</header>
 
-  <!-- SKILLS -->
-  <section class="fade-in">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">Django</div>
-      <div class="skill">SQL</div>
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Git & GitHub</div>
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">Python</div>
+    <div class="skill">Django</div>
+    <div class="skill">SQL</div>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Machine Learning</div>
+    <div class="skill">Git & GitHub</div>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Company Research Agent</h3>
+      <p>Django app with RSS-based company news aggregation.</p>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section class="fade-in">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Company Research Agent</h3>
-        <p>Django application that aggregates company profiles and latest news using RSS feeds.</p>
-        <a href="https://github.com/leela-2005" target="_blank">View on GitHub →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>AI Resume Screening System</h3>
-        <p>Resume–job matching system using TF-IDF and cosine similarity.</p>
-        <a href="https://github.com/leela-2005" target="_blank">View on GitHub →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>ElectroShop</h3>
-        <p>E-commerce web application with authentication, cart, and admin panel.</p>
-        <a href="https://github.com/leela-2005" target="_blank">View on GitHub →</a>
-      </div>
+    <div class="project-card">
+      <h3>AI Resume Screening System</h3>
+      <p>Resume ranking using TF-IDF & Cosine Similarity.</p>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="fade-in contact">
-    <h2>Contact</h2>
-    <p>Email: leelakrishnakondapaturi@gmail.com</p>
-    <div class="social-links">
-      <a href="https://github.com/leela-2005" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/in/leelakrishna-kondapaturi" target="_blank">LinkedIn</a>
+    <div class="project-card">
+      <h3>ElectroShop</h3>
+      <p>E-commerce platform with cart, auth & admin panel.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Leelakrishna Kondapaturi | Built with ❤️
-  </footer>
+<section>
+  <h2>Connect With Me</h2>
+  <div class="contact-box">
 
-  <!-- JAVASCRIPT -->
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
+    <div class="contact-info">
+      <p><b>Name:</b> Leelakrishna Kondapaturi</p>
+      <p><b>Email:</b> leelakrishnakondapaturi@gmail.com</p>
+      <p><b>Mobile:</b> +91 9652346474</p>
+      <p>
+        <a href="https://github.com/leela-2005" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/leelakrishna-kondapaturi" target="_blank">LinkedIn</a>
+      </p>
+    </div>
 
-    const appearOptions = {
-      threshold: 0.2
-    };
+    <!-- CONTACT FORM -->
+    <!-- Replace action URL after Formspree setup -->
+    <form action="https://formspree.io/f/mnjjpdpd" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
+  </div>
+</section>
 
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-  </script>
+<footer>
+  © 2026 Leelakrishna Kondapaturi | Portfolio
+</footer>
 
 </body>
 </html>
-
